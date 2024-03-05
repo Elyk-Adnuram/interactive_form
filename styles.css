@@ -97,15 +97,96 @@ body {
 }
 
 /* USER INPUTS */
+/* #nameLabel {
+    grid-area: nameLabel;
+  }
+
+#name {
+    grid-area: name;
+}
+
+#number {
+    grid-area: number;
+}
+
+#expLabel {
+    grid-area: expLabel;
+}
+
+#numberMonth {
+    grid-area: numberMonth;
+}
+
+#numberMonth {
+    grid-area: numberYear;
+}
+
+#cvcLabel {
+    grid-area: cvcLabel;
+}
+
+#cvc {
+    grid-area: cvc;
+}
+
+#confirm {
+    grid-area:confirm;
+}
+
 .card-inputs {
     margin: 4em 1em 2em 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    .container {  display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 0.5px 1px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "nameLabel nameLabel nameLabel"
+          "name name name"
+          "numberLabel numberLabel numberLabel"
+          "number number number "
+          "expLabel expLabel cvcLabel"
+          "numberMonth numberYear cvc"
+          "confirm confirm confirm";
+      }
+      
+ 
 
 }
 
+.card-inputs > input {
 
+} */
+
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 10px;
+  }
+  
+  label {
+    grid-column: span 2;
+  }
+  
+  input[type="text"],
+  button {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+  }
+  
+  button[type="submit"] {
+    grid-column: span 2;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  
 
 
 
