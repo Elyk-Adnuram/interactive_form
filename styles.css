@@ -1,165 +1,173 @@
 body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    width: 18rem;
-    font-family: "Space Grotesk", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 18rem;
+  font-family: "Space Grotesk", sans-serif;
+  border: 1px solid brown;
 }
 
 /* BACKGROUND IMAGES */
 .bg-card-front {
-    background-image:url("./images/bg-card-front.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: fixed;
-    left: 0.938rem;
-    top: 5.625rem;
-    height: 9.375rem;
-    width: 12.5rem;
+  background-image: url("./images/bg-card-front.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: fixed;
+  left: 0.938rem;
+  top: 5.625rem;
+  height: 9.375rem;
+  width: 12.5rem;
 }
 
-
 .bg-card-back {
-    background-image:url("./images/bg-card-back.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: fixed;
-    left: 4rem;
-    top: 1.625rem;
-    height: 9.375rem;
-    width: 12.5rem;
-  
+  background-image: url("./images/bg-card-back.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: fixed;
+  left: 4rem;
+  top: 1.625rem;
+  height: 9.375rem;
+  width: 12.5rem;
 }
 
 .card-background {
-    background-image:url("./images/bg-main-mobile.png") ;
-    background-size: cover;
-    height: 10.5rem;
-    width: 100%
+  background-image: url("../images/bg-main-mobile.png");
+  background-size: cover;
+  height: 10.5rem;
+  width: 100%;
 }
 
 /* CARD DETAILS DISPLAY */
-.card-details{
-    color: hsl(0, 0%, 100%);
-   
+.card-details {
+  color: hsl(0, 0%, 100%);
 }
 
 #card-number {
-    margin: 0 auto;
-    font-size: 1em;
-    /* font-weight: bold; */
-    text-align: center;
+  margin: 0 auto;
+  font-size: 1em;
+  /* font-weight: bold; */
+  text-align: center;
 }
 
 #cardholder-name {
-    
 }
 
 #CVV {
-    position: fixed;
-    top: 4.6rem;
-    left: 13.45rem;
-    font-size: 0.5rem;
+  position: fixed;
+  top: 4.6rem;
+  left: 13.45rem;
+  font-size: 0.5rem;
 }
 
 #big-circle {
-    border-radius: 50%;
-    border: 2px solid hsl(0, 0%, 100%);
-    height: 1.25em;
-    width: 1.25rem;
-    background-color: hsl(0, 0%, 100%);
+  border-radius: 50%;
+  border: 2px solid hsl(0, 0%, 100%);
+  height: 1.25em;
+  width: 1.25rem;
+  background-color: hsl(0, 0%, 100%);
 }
 
 #small-circle {
-    border-radius: 50%;
-    border: 1px solid hsl(0, 0%, 100%);
-    height: 0.625rem;
-    width: 0.625rem;
-  
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 100%);
+  height: 0.625rem;
+  width: 0.625rem;
 }
 
-.flex{
-    display: flex;
-    align-items: center;
-    
+.flex {
+  display: flex;
+  align-items: center;
 }
 
 .circles-container {
-    margin: 0.5em 1em 1em 0.5em;
-    gap: 0.5rem;
+  margin: 0.5em 1em 1em 0.5em;
+  gap: 0.5rem;
 }
 
 .name-exp-container {
-    font-size: 0.5rem;
-    justify-content: space-between;
-    margin: 1em
-
+  font-size: 0.5rem;
+  justify-content: space-between;
+  margin: 1em;
 }
 
 /* USER INPUTS */
-/* #nameLabel {
-    grid-area: nameLabel;
-  }
+#nameLabel {
+  grid-area: nameLabel;
+}
 
 #name {
-    grid-area: name;
+  grid-area: name;
+}
+
+#numberLabel {
+  grid-area: numberLabel;
 }
 
 #number {
-    grid-area: number;
+  grid-area: number;
 }
 
 #expLabel {
-    grid-area: expLabel;
+  grid-area: expLabel;
+  width: 10rem;
 }
 
 #numberMonth {
-    grid-area: numberMonth;
+  grid-area: numberMonth;
+  width: 2.5rem;
+  margin-left: 0;
 }
 
-#numberMonth {
-    grid-area: numberYear;
+#numberYear {
+  grid-area: numberYear;
+  width: 2.5rem;
 }
 
 #cvcLabel {
-    grid-area: cvcLabel;
+  grid-area: cvcLabel;
+  width: 2.5rem;
 }
 
 #cvc {
-    grid-area: cvc;
+  grid-area: cvc;
+  width: 5rem;
 }
 
 #confirm {
-    grid-area:confirm;
+  grid-area: confirm;
+  border-radius: 5px;
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  font-family: "Space Grotesk", sans-serif;
+  /* padding: 1em; */
+  width: 15rem;
+  /* margin: 0.25em; */
 }
 
 .card-inputs {
-    margin: 4em 1em 2em 1em;
-    .container {  display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        gap: 0.5px 1px;
-        grid-auto-flow: row;
-        grid-template-areas:
-          "nameLabel nameLabel nameLabel"
-          "name name name"
-          "numberLabel numberLabel numberLabel"
-          "number number number "
-          "expLabel expLabel cvcLabel"
-          "numberMonth numberYear cvc"
-          "confirm confirm confirm";
-      }
-      
- 
-
+  margin: 4em 1em 2em 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  /* gap: 0.5px 0; */
+  /* grid-auto-flow: row; */
+  /* align-content: center; */
+  grid-template-areas:
+    "nameLabel nameLabel nameLabel"
+    "name name name"
+    "numberLabel numberLabel numberLabel"
+    "number number number "
+    "expLabel expLabel cvcLabel"
+    "numberMonth numberYear cvc"
+    "confirm confirm confirm";
 }
 
 .card-inputs > input {
+  width: 15rem;
+  border-radius: 5px;
+}
 
-} */
-
-
-form {
+/* form {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 10px;
@@ -188,5 +196,4 @@ form {
   }
   
 
-
-
+ */
