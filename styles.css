@@ -31,7 +31,7 @@ body {
 }
 
 .card-background {
-  background-image: url("../images/bg-main-mobile.png");
+  background-image: url("./images/bg-main-mobile.png");
   background-size: cover;
   height: 10.5rem;
   width: 100%;
