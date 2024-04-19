@@ -27,7 +27,10 @@
       <div id="card-number" aria-placeholder="0" class="card-details">0000 0000 0000 0000</div>
       <div class="flex name-exp-container">
         <span aria-placeholder="0" id="cardholder-name" class="card-details">JANE APPLESEED</span>
-        <span aria-placeholder="0" id="exp-date" class="card-details">00/00</span>
+        <div>
+          <span aria-placeholder="0" id="exp-date-month" class="card-details">00/</span>
+          <span aria-placeholder="0" id="exp-date-year" class="card-details">00</span>
+        </div>
       </div>
     </section>
 
@@ -41,7 +44,7 @@
           name="name"
           oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);"
         />
-        />
+
         <label for="number" id="numberLabel">CARD NUMBER</label>
         <input
           type="number"
@@ -52,9 +55,9 @@
         />
         <label for="numberMonth" id="expLabel">EXP. DATE (MM/YY)</label>
         <label for="cvc" id="cvcLabel">CVC</label>
-        <input type="number" min="2" max="2" placeholder=" MM" id="numberMonth" name="exp" />
-        <input type="number" min="2" max="2" placeholder="YY" id="numberYear" name="exp" />
-        <input type="number" placeholder="e.g. 123" id="cvc" min="3" max="3" name="cvc" />
+        <input type="number" min="01" max="12" placeholder=" MM" id="numberMonth" name="exp" />
+        <input type="number" min="01" max="99" placeholder="YY" id="numberYear" name="exp" />
+        <input type="number" placeholder="e.g. 123" id="cvc" min="000" max="999" name="cvc" />
         <button id="confirm">Confirm</button>
       </form>
     </main>
