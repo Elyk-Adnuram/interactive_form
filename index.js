@@ -12,11 +12,19 @@ const cardCVVDisplay = document.getElementById("CVV");
 function displayUserInputs(input1, input2) {
   if (input1 && input2) {
     input1.addEventListener("change", (e) => {
-      console.log(e.target.value);
-      if (input1.length === cardMonth) {
-        input2.textContent = `${e.target.value} /`;
+      let eventTarget = e.target.value;
+      // console.log(e.target.value);
+      if (input1 === cardNumber) {
+        let cardNumberGroup1 = eventTarget.substring(0, 4);
+        let cardNumberGroup2 = eventTarget.substring(4, 8);
+        let cardNumberGroup3 = eventTarget.substring(8, 12);
+        let cardNumberGroup4 = eventTarget.substring(12, 16);
+        input2.textContent = `${cardNumberGroup1} ${cardNumberGroup2} ${cardNumberGroup3} ${cardNumberGroup4}`;
+      } else if (input1 === cardMonth) {
+        input2.textContent = `${eventTarget} /`;
+      } else {
+        input2.textContent = e.target.value;
       }
-      input2.textContent = e.target.value;
     });
   } else {
     alert("Error, please retry");
@@ -28,18 +36,3 @@ displayUserInputs(cardNumber, cardNumberDisplay);
 displayUserInputs(cardMonth, cardMonthDisplay);
 displayUserInputs(cardYear, cardYearDisplay);
 displayUserInputs(cardCVV, cardCVVDisplay);
-
-// alert("hello world");
-
-//create function to prevent user from entering more than 32 letters in cardholderName
-function limitCardholderName(input) {
-  input.addEventListener("change", (e) => {
-    console.log(e);
-    if (e.target.length > 32) {
-      alert("too many letters");
-    }
-  });
-}
-
-limitCardholderName(cardholderName);
-//create function to prevent user from entering more than 16 numbers in const cardNumber = document.getElementById("number");
