@@ -133,7 +133,7 @@ body {
   width: 5rem;
 }
 
-#confirm {
+.buttons {
   grid-area: confirm;
   border-radius: 5px;
   background-color: hsl(278, 68%, 11%);
@@ -167,6 +167,18 @@ body {
   border-radius: 5px;
 }
 
+/* COMPLETED STATUS */
+
+.icon-complete {
+  width: 3.5rem;
+  margin: 3em auto 0.5em auto;
+}
+
+.completed-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 /* form {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
