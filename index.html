@@ -15,25 +15,30 @@
     />
   </head>
   <body>
-    <section class="card-background"></section>
-    <section class="bg-card-back">
-      <span id="CVV" aria-placeholder="0" class="card-details">000</span>
-    </section>
-    <section class="bg-card-front">
-      <span class="flex circles-container">
-        <span id="big-circle"></span>
-        <span id="small-circle"></span>
-      </span>
-      <div id="card-number" aria-placeholder="0" class="card-details">0000 0000 0000 0000</div>
-      <div class="flex name-exp-container">
-        <span aria-placeholder="0" id="cardholder-name" class="card-details">JANE APPLESEED</span>
-        <div>
-          <span aria-placeholder="0" id="exp-date-month" class="card-details">00/</span>
-          <span aria-placeholder="0" id="exp-date-year" class="card-details">00</span>
-        </div>
+    <div class="card&background">
+      <section class="card-background"></section>
+      <div class="cards_back_front">
+        <section class="bg-card-back">
+          <span id="CVV" aria-placeholder="0" class="card-details">000</span>
+        </section>
+        <section class="bg-card-front">
+          <span class="flex circles-container">
+            <span id="big-circle"></span>
+            <span id="small-circle"></span>
+          </span>
+          <div id="card-number" aria-placeholder="0" class="card-details">0000 0000 0000 0000</div>
+          <div class="flex name-exp-container">
+            <span aria-placeholder="0" id="cardholder-name" class="card-details"
+              >JANE APPLESEED</span
+            >
+            <div>
+              <span aria-placeholder="0" id="exp-date-month" class="card-details">00/</span>
+              <span aria-placeholder="0" id="exp-date-year" class="card-details">00</span>
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
-
+    </div>
     <main>
       <form class="card-inputs">
         <label for="name" id="nameLabel">CARDHOLDER NAME</label>

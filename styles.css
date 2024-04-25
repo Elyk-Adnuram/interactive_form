@@ -2,9 +2,14 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  width: 18rem;
+  width: 23.438rem;
+  height: 41.688rem;
   font-family: "Space Grotesk", sans-serif;
   border: 1px solid brown;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 2rem;
 }
 
 /* BACKGROUND IMAGES */
@@ -49,7 +54,8 @@ body {
   text-align: center;
 }
 
-#cardholder-name {
+.cards_back_front {
+  margin: 0 auto;
 }
 
 #CVV {
@@ -141,7 +147,7 @@ body {
   font-family: "Space Grotesk", sans-serif;
   /* padding: 1em; */
   width: 15rem;
-  /* margin: 0.25em; */
+  margin: 1em auto;
 }
 
 .card-inputs {
