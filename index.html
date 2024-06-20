@@ -43,8 +43,9 @@
       <form class="card-inputs">
         <label for="name" id="nameLabel">CARDHOLDER NAME</label>
         <input
+          required
           type="text"
-          placeholder=" e.g. Jane Appleseed"
+          placeholder=" e.g. Jane Doe"
           id="name"
           name="name"
           onkeypress="if(this.value.length==30) return false;"
@@ -53,16 +54,18 @@
 
         <label for="number" id="numberLabel">CARD NUMBER</label>
         <input
+          required
           type="number"
           placeholder="e.g. 1234 5678 9123 0000"
           id="number"
           name="number"
-          max="99999999"
+          max="9999999999999999"
           onkeypress="if(this.value.length===16) return false;"
         />
         <label for="numberMonth" id="expLabel">EXP. DATE (MM/YY)</label>
         <label for="cvc" id="cvcLabel">CVC</label>
         <input
+          required
           type="number"
           min="01"
           max="12"
@@ -72,6 +75,7 @@
           onkeypress="if(this.value.length===2) return false;"
         />
         <input
+          required
           type="number"
           min="01"
           max="99"
@@ -81,6 +85,7 @@
           onkeypress="if(this.value.length===2) return false;"
         />
         <input
+          required
           type="number"
           placeholder="e.g.123"
           id="cvc"
@@ -92,18 +97,6 @@
         <button id="confirm" class="buttons">Confirm</button>
       </form>
     </main>
-
-    <!-- 
-  Completed state start
-
-  Thank you!
-  We've added your card details
-  Continue -->
-
-    <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
 
     <script src="index.js"></script>
   </body>
